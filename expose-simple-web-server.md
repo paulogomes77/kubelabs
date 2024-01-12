@@ -9,7 +9,7 @@ A ideia é simples, criar um pod e expo-lo no host fisico, ou seja, o computador
 #### 1. Criar o pod com um servidor web, por exemplo o NGINX.
 
 ```
-$ kubectl run meunginx --image nginx --port 8081
+$ kubectl run meunginx --image nginx
 ```
 
 #### 2. Testar conectividade ao pod
