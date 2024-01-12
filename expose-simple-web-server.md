@@ -29,7 +29,7 @@ curl 10.44.0.0
 #### 3. Expor o pod ao exterior
 
 ```
-$ kubectl expose pod/meunginx --type="NodePort" --port 8080 --dry-run=client >> meunginxservice.yaml
+$ kubectl expose pod/meunginx --type="NodePort" --port 8080 --target-port=80 --dry-run=client >> meunginxservice.yaml
 
 apiVersion: v1
 kind: Service
@@ -79,5 +79,14 @@ $ curl 192.168.122.234:31130
 # curl (ip do host:porto criado pelo serviço - ver ponto 4.)
 
 ```
+
+#### 6. Graficamente de uma forma muito simples...
+
+```
+HOST                               > Kubernetes Service > Pod/Container
+192.168.122.234:31130 (nodeport)   > Porto 8080         > Porto 80
+
+```
+
 
 
