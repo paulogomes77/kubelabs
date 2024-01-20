@@ -83,9 +83,10 @@ $ curl 192.168.122.234:31130
 #### 6. Esquematizando de uma forma muito simplista...
 
 ```
-HOST                               >  Kubernetes Service  >  Pod/Container
-192.168.122.234:31130 (nodeport)   >  Porto 8080          >  Porto 80
-
+------------------------------------    ------------------------     -----------------
+| HOST                             |  > | Kubernetes Service   |  >  | Pod/Container |
+| 192.168.122.234:31130 (nodeport) |  > | Porto 8080           |  >  | Porto 80      |
+------------------------------------    -----------------------      -----------------
 ```
 
 
